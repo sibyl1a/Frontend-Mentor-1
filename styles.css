@@ -1,0 +1,199 @@
+*{
+    background-color: rgb(13, 25, 43);
+}
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#card{
+    background-color: rgb(20, 37, 62);
+    height: 58vh;
+    width: 22vw;
+    border-radius: 12px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow:0 30px 0 20px rgba(12, 23, 41, 1),
+               0 30px 0 50px rgb(13, 24, 42);
+}
+#photo {
+    position: relative;
+    width: 270px;
+    height: 270px;
+    border-radius: 10px;
+    margin-top:20px;
+    background-image: url('https://i.postimg.cc/rwbBWDwk/image-equilibrium.jpg');
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background-color: hsl(178, 100%, 50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1;
+    border-radius: 10px;
+  }
+  
+#photo:hover .overlay {
+    opacity: 0.5;
+}
+
+#photo svg {
+    z-index: 2;
+    position: relative;
+    display: none;
+}
+
+#photo:hover svg {
+    display: block;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+#details{
+    width: 270px;
+    height: 49%;
+    border-radius: 10px;
+    margin-bottom:25px;
+    background-color: hsl(216, 50%, 16%);
+}
+#details h1{
+    background-color: transparent;
+    color:white;
+    font-family: Outfit;
+    font-size:20px;
+    font-weight: 400;
+    padding-top:5px;
+}
+#details p{
+    color: #7386A6;
+    font-family: Outfit;
+    font-size:16px;
+    background-color: transparent;
+    padding:0;
+    margin: 0;
+
+}
+#price h2{
+    color: hsl(178, 100%, 50%);
+    background-color: hsl(216, 50%, 16%);
+    font-family: Outfit;
+    font-size:16px;
+    font-weight: 300;
+}
+.price-det{
+    background-color: hsl(216, 50%, 16%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:3px;
+}
+#price svg{
+    background-color: hsl(216, 50%, 16%);
+}
+#price{
+    display: flex;
+    flex-direction: row;
+    background-color: hsl(216, 50%, 16%);
+    gap: 90px;
+    align-items: center;  
+    padding-top: 5px;
+}
+hr{
+    height: 0.5px;
+    background-color: #7386A6;
+    opacity: 50%;
+    border: none;
+}
+#credits{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap:15px;
+    background-color: hsl(216, 50%, 16%);
+}
+#credits p {
+    font-size: 16px;
+    margin-top: 6px; 
+  }
+#credits img{
+    width: 30px;
+    height: 30px;
+    border: 1px solid white;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    background-color: hsl(216, 50%, 16%);
+    margin-top: 8px;
+}
+span{
+    color:white;
+    background-color: hsl(216, 50%, 16%);
+}
+span:hover{
+    color:hsl(178, 100%, 50%);
+    cursor: pointer;
+}
+#details h1:hover{
+    color:hsl(178, 100%, 50%);
+    cursor: pointer;
+}
+
+
+@media only screen and (max-width:375px){
+    #card{
+        height:82vh;
+        width:87vw;
+        position:relative;
+    }
+    #photo{
+        height: 60%;
+        width:86%;
+        margin-top:24px;
+    }
+    #details h1{
+        font-size: 22px;
+        font-weight: 500;
+    }
+    #details h2{
+        font-weight: 400;
+        font-size: 15px;
+    }
+    span{
+        font-weight: 200;
+    }
+    #credits img{
+        width: 32px;
+        height: 32px; 
+    }
+    #details p{
+        font-size: 17px;
+    }
+}
+@media only screen and (min-width:1680px){
+    #card{
+        height: 58vh;
+        width: 18vw;
+        position:relative;
+    }
+    #photo{
+        height: 60%;
+        width:86%;
+        margin-top:24px;
+    }
+    #credits{
+        margin-top:15px;
+    }
+}
